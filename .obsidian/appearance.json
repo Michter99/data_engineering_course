@@ -1,0 +1,9 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "Catppuccin",
+  "accentColor": "#386aff",
+  "interfaceFontFamily": "Inter",
+  "textFontFamily": "Inter",
+  "nativeMenus": true,
+  "translucency": false
+}
