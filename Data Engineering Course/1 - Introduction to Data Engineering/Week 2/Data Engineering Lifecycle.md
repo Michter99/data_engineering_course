@@ -71,3 +71,16 @@ The final stage of the data engineering lifecycle is **serving data**, where dat
     - Serving data for **model training**, feature stores, and **real-time inference**. Machine learning use cases require handling more complexity, such as ensuring proper data history and lineage.
 - **Reverse ETL**:
     - Involves feeding transformed or analyzed data back into source systems (e.g., pushing lead scores from a data warehouse back into a CRM). This process ensures that enhanced data is available for further business use.
+
+## Orchestration
+**Orchestration** refers to coordinating and managing the tasks in a data pipeline. As a data engineer, orchestration is central to automating and managing data workflows across the pipeline lifecycle.
+#### Orchestration Frameworks:
+- **Sophisticated orchestration** is now available via open-source frameworks like **Apache Airflow**, **Dagster**, **Prefect**, and **Mage**.
+- These tools enable you to automate pipelines, set task dependencies, monitor progress, and trigger alerts for failures.
+- Key Features offered by modern orchestration tools:
+	- **Task Dependencies**: Ensure one task only starts after a prerequisite task completes.
+	- **Event-Driven**: Trigger tasks based on specific events (e.g., new data available).
+	- **Monitoring & Alerts**: Notify you if a task fails or takes too long.
+#### Directed Acyclic Graphs (DAGs):
+- A **DAG** represents the flow of data through a pipeline where tasks (nodes) and dependencies (edges) form a one-directional flow without loops.
+- In a DAG, data moves through multiple stages—ingestion, transformation, storage—leading to outputs like machine learning models or analytics reports.

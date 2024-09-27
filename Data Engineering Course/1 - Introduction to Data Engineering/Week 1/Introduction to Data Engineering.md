@@ -1,7 +1,7 @@
 ## Definition of Data Engineering
 Data Engineering is the development, implementation, and maintenance of systems and processes that take in raw data and produce high-quality, consistent information that supports downstream use cases, such as analysis and machine learning. Data Engineering is the intersection of security, data management, DataOps, data architecture, orchestration, and software engineering.
 
-## [[The Data Engineering Lifecycle]]
+## [[Data Engineering Lifecycle]]
 ![[Data Engineering Lifecycle.excalidraw|100%x200]]
 
 - **Generation**: This represents the creation of raw data. This could come from a variety of sources like transactional databases, web services, sensor data, logs, and more. It's the initial point where data enters the pipeline.
@@ -10,7 +10,7 @@ Data Engineering is the development, implementation, and maintenance of systems 
 - **Serving**: After the data is transformed, it is ready for use by different applications or teams. This could involve serving the data to dashboards, machine learning models, or operational systems. The serving layer makes the processed data available for real-time or batch consumption.
 - **Analytics, Machine Learning, and Reverse ETL**: Once data is served, it can be analyzed for insights, used to train machine learning models, or re-integrated into other operational systems (Reverse ETL) to act on insights. This is where the value of the data is realized through data-driven decision-making.
 - **Storage**: Supporting all these stages is a robust data storage layer. Data needs to be stored efficiently, securely, and in formats that support the various operations needed, from raw to transformed data.
-**Supporting Infrastructure (Undercurrents):** Underpinning the entire lifecycle are essential components necessary for managing, orchestrating, and securing the data pipeline.
+**Supporting Infrastructure ([[Undercurrents of the Data Engineering LifeCycle]]):** Underpinning the entire lifecycle are essential components necessary for managing, orchestrating, and securing the data pipeline.
 
 ## Definition of Data Pipeline
 The combination of architecture, systems, and processes that move data through the stages of the data engineering lifecycle.
