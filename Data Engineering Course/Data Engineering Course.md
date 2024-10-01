@@ -4,3 +4,4 @@
 ## Week 2: The Data Engineering Lifecycle
 - ### [[Data Engineering Lifecycle]]
 - ### [[Undercurrents of the Data Engineering LifeCycle]]
+- ### [[Practical Examples on AWS]]
