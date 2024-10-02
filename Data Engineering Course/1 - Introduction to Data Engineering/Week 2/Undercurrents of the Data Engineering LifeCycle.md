@@ -26,7 +26,7 @@ Data governance ensures the **quality, integrity, security, and usability** of d
 - **Data security and privacy**: Safeguarding sensitive information (discussed in the previous video).
 - **Data quality**: Ensuring data is accurate, complete, and available when needed. High-quality data aligns with stakeholder expectations and facilitates better decision-making, while low-quality data leads to inefficiencies and poor business outcomes.
 
-## Data Architecture
+## [[Data Architecture]]
 Data architecture serves as a **blueprint** for designing and building data systems that meet the evolving needs of an organization.
 #### Key Principles of Good Data Architecture:
 - **Support Evolving Needs**: Data architecture must be flexible enough to adapt to changing organizational requirements over time, not just address current needs.
