@@ -57,3 +57,22 @@ Systems must scale up during periods of high demand and scale down to save costs
 4. **Embrace FinOps**
 
 Cloud systems operate on a pay-as-you-go model, which can lead to unexpected costs if not managed properly. **FinOps** encourages a balanced approach, ensuring cost-effective resource use while maintaining performance. As a data engineer, you’ll need to manage budgets by optimizing cloud costs and choosing the right mix of on-demand and spot instances, among other strategies.
+
+## Batch Architectures
+Batch architectures are a traditional approach to data processing, where data is ingested, transformed, and stored in fixed intervals, typically for use cases where real-time processing is not necessary. The key concept revolves around **batch processing**, where data is collected over a period (e.g., daily sales data) and processed at regular intervals.
+
+#### Key Batch Architecture Patterns:
+- **ETL (Extract, Transform, Load)**:
+    - **Extract** data from source systems into a staging area.
+    - **Transform** the data by cleaning and standardizing it.
+    - **Load** the transformed data into a data warehouse for analysis or storage.
+- **ELT (Extract, Load, Transform)**:
+    - Data is **extracted** and **loaded** directly into the data warehouse, and transformations are applied within the warehouse itself. This is increasingly popular due to the powerful computational capabilities of modern cloud data warehouses.
+- **Data Mart**:
+    - A specialized subset of a data warehouse designed for a specific department or business area (e.g., sales or marketing). It provides additional transformations, optimizing query performance and simplifying data access for specific use cases.
+
+#### Considerations in Batch Architectures:
+- **Choosing Common Components**: Selecting shared components (e.g., data warehouses) to facilitate collaboration and reduce silos across teams.
+- **Planning for Failure**: Preparing for issues like system downtime or changes in data schema by engaging with source system owners and ensuring that systems can handle unexpected changes.
+- **Scalability**: Designing systems that can handle variations in batch sizes and changes in data volume over time.
+- **Cost Optimization (FinOps)**: Performing a cost-benefit analysis to balance system performance and business value while managing operational costs.
