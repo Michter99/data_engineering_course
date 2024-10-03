@@ -76,3 +76,40 @@ Batch architectures are a traditional approach to data processing, where data is
 - **Planning for Failure**: Preparing for issues like system downtime or changes in data schema by engaging with source system owners and ensuring that systems can handle unexpected changes.
 - **Scalability**: Designing systems that can handle variations in batch sizes and changes in data volume over time.
 - **Cost Optimization (FinOps)**: Performing a cost-benefit analysis to balance system performance and business value while managing operational costs.
+
+## Streaming Architectures
+Streaming architectures involve processing data in real-time, with data continuously flowing from a producer to a consumer through a streaming broker. Unlike batch architectures that process data in chunks over fixed intervals, streaming systems make data available almost instantly after it’s generated, enabling near real-time analytics and decision-making.
+
+#### Key Concepts:
+- **Producer**: The data source (e.g., clicks, IoT sensor data).
+- **Consumer**: The system that processes the data (e.g., applications, data lakes, warehouses).
+- **Streaming Broker**: Coordinates the flow of data between producers and consumers.
+- **End Use**: Real-time analytics or machine learning models.
+
+#### Popular Architectures:
+- **Lambda Architecture**:
+    - Combines batch and streaming processes.
+    - Data is sent to both a stream processing system and a batch system.
+    - Challenges: Managing parallel systems and different code bases.
+- **Kappa Architecture**:
+    - Proposed to simplify by using a stream processing platform for all data handling.
+    - Handles both real-time and batch processing from the same stream.
+    - Focuses on event-based architecture, where data is processed immediately as it’s produced.
+
+#### Key Considerations for Streaming Architectures:
+- **Flexibility & Scalability**: Systems must adapt to changing data volumes.
+- **Failure Modes**: Anticipate potential points of failure in real-time data streams.
+- **Compliance**: Ensure systems adhere to laws and regulations regarding data privacy and security.
+
+## Architecting for Compliance
+Regulatory compliance is crucial for data engineers, as failing to meet these requirements can result in lawsuits and fines. Here’s how compliance fits into your role as a data engineer:
+#### Key Regulations to Know
+- **General Data Protection Regulation (GDPR)**: Enacted in the European Union in 2018, GDPR is centered on protecting individual privacy and personal data. It applies not only to personally identifiable information (PII) but also to any data that can collectively identify an individual. You must obtain consent before collecting personal data and enable timely deletion of data if requested by an individual.
+- **Health Insurance Portability and Accountability Act (HIPAA)**: In the U.S., HIPAA governs the handling of sensitive healthcare data. Similar laws exist globally for medical data.
+- **Sarbanes-Oxley Act (SOX)**: This U.S. law focuses on financial data reporting and record-keeping requirements. Other countries have similar regulations for the finance industry.
+#### Global Reach of Compliance
+- Even if your company or customers aren't based in the EU, similar privacy regulations have been adopted by various countries and U.S. states.
+- As data privacy concerns grow, expect more stringent regulations to be enacted in the future, regardless of where your organization operates.
+#### Building Compliance-Ready Systems
+- **Stay ahead of regulations**: Design systems that comply with data protection laws, even if your current jurisdiction's regulations are less strict. This helps future-proof your systems.
+- **Flexible and adaptable architecture**: Use loosely coupled systems to make it easier to adapt to changes in regulations. This enables you to update systems quickly without major overhauls when new laws are enacted.
