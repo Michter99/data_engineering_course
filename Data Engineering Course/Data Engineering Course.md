@@ -6,4 +6,6 @@
 - ### [[Undercurrents of the Data Engineering LifeCycle]]
 - ### [[Practical Examples on AWS]]
 ## Week 3: Data Architecture
-- #### [[Data Architecture]]
+- ### [[Data Architecture]]
+- ### [[Choosing the Right Technologies]]
+- ### [[Investigating Your Architecture on AWS]]
