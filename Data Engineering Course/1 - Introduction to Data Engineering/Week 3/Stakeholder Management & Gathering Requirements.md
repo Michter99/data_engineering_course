@@ -30,3 +30,5 @@ However, the lesson emphasizes that you can avoid the pitfalls of the Iron Trian
 - Building loosely coupled systems
 - Optimizing for reversible decisions
 - Understanding stakeholder needs deeply
+
+When building batch pipelines on AWS, it’s essential to choose the right tools and services based on your system requirements and use case. Here’s an overview of AWS services that can support batch data processing, as well as key decision points for tool selection.

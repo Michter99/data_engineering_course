@@ -1,3 +1,4 @@
+# Introduction to Data Engineering
 ## Week 1: Introduction to Data Engineering
 - ### [[Introduction to Data Engineering]]
 - ### [[Data Engineering on the Cloud]]
@@ -9,3 +10,6 @@
 - ### [[Data Architecture]]
 - ### [[Choosing the Right Technologies]]
 - ### [[Investigating Your Architecture on AWS]]
+- ### [[Stakeholder Management & Gathering Requirements]]
+- ### [[Translating Requirements to Architecture]]
+- 
