@@ -12,4 +12,6 @@
 - ### [[Investigating Your Architecture on AWS]]
 - ### [[Stakeholder Management & Gathering Requirements]]
 - ### [[Translating Requirements to Architecture]]
+# Source Systems, Data Ingestion, and Pipelines
+- ### [[Introduction to Source Systems]]
 - 
