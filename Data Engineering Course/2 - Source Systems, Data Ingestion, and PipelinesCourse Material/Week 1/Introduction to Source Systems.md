@@ -121,3 +121,47 @@ ACID principles ensure transactions in relational databases are processed reliab
     - Ensures that once a transaction completes, its results are permanent and resilient to system failures.
     - Data remains accessible even after events like power outages or hardware failures.
     - **Example**: An update to an account balance remains intact even if a power failure occurs immediately afterward.
+
+## Amazon DynamoDB
+#### Key Features of Amazon DynamoDB
+
+1. **Key-Value Database**:
+    - DynamoDB is a key-value database where data is stored in **tables**.
+    - Each item (or row) in the table is uniquely identified by a **primary key**.
+    - Tables are **schema-less**, meaning items can have different sets of attributes.
+
+2. **Primary Key**:
+    - The primary key uniquely identifies each item in the table.
+    - **Partition Key**: A simple primary key that consists of a single attribute (e.g., Person ID).
+    - **Composite Key**: Consists of a **partition key** and a **sort key**, allowing for multiple items with the same partition key but unique sort keys (e.g., Order ID + Item Line Number).
+
+3. **Partitioning**:
+    - DynamoDB uses the partition key to determine in which physical storage partition the item will be saved.
+    - The **sort key** is used to organize and sort items within a specific partition.
+
+## Object Storage
+#### Key Concepts in Object Storage
+
+1. **Flat Structure**:
+    - Unlike traditional file systems with folders and subfolders, Object Storage uses a **flat structure** with no inherent hierarchy.
+    - While platforms like Amazon S3 offer a user interface that mimics folders, all files (objects) are actually stored at the top level for efficient access.
+2. **Objects and Metadata**:
+    - Each file, or **object**, has a unique **Universal Unique Identifier (UUID)** or key, which is essential for accessing and managing it.
+    - Objects also come with **metadata**—additional details like creation date, file type, and owner information.
+3. **Immutability**:
+    - Once written, objects in Object Storage are **immutable**, meaning they can’t be partially modified or appended.
+    - To make changes, you must overwrite the entire object with an updated version or enable **versioning** to retain multiple versions.
+4. **Data Versatility**:
+    - Object Storage can handle various file formats (CSV, JSON, video, audio, images, etc.), making it ideal for **semi-structured and unstructured data**.
+
+#### Benefits of Object Storage
+
+1. **Scalability**:
+    - Object Storage can easily **scale** to accommodate large volumes of data without performance degradation, making it suitable for data-intensive tasks.
+2. **Availability and Durability**:
+    - In cloud environments, data is typically **replicated across multiple availability zones** to ensure high durability and availability, even in case of data center failures.
+    - For example, Amazon S3 offers **11 nines (99.999999999%) of durability** by replicating data across multiple zones.
+3. **Cost-Effectiveness**:
+    - Object Storage is often **cheaper** than other storage types, especially for infrequently accessed data, making it a cost-effective solution for long-term storage.
+4. **Compatibility with Modern Architectures**:
+    - Object Storage is fundamental to **data lakes** and **data lakehouse** architectures, which require flexible, scalable, and durable storage solutions.
