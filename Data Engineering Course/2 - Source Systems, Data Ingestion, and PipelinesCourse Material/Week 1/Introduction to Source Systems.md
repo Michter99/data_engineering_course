@@ -165,3 +165,55 @@ ACID principles ensure transactions in relational databases are processed reliab
     - Object Storage is often **cheaper** than other storage types, especially for infrequently accessed data, making it a cost-effective solution for long-term storage.
 4. **Compatibility with Modern Architectures**:
     - Object Storage is fundamental to **data lakes** and **data lakehouse** architectures, which require flexible, scalable, and durable storage solutions.
+
+## Logs
+#### What Are Logs?
+- Logs are **records of events** or activities within a system or application.
+- They capture a time-ordered sequence of events and are often used to **monitor** system health, **troubleshoot errors**, and **analyze performance**.
+- Historically considered as “exhaust” data by developers, logs now serve as valuable data sources for downstream applications.
+
+#### Structure and Components of a Log
+1. **User/System Information**: Logs typically include **user IDs** or **system identifiers**, such as IP addresses, to associate events with a specific entity.
+2. **Event Details and Metadata**: Describe the action, such as a user logging in or adding an item to a cart, along with **status updates** on the event.
+3. **Timestamp**: Records the **exact time** an event occurs, which is critical for analysis and troubleshooting.
+4. **Log Levels**: Tags that categorize the significance of each log record:
+    - **Info**: Routine information or basic activity.
+    - **Debug**: Detailed technical information useful for debugging.
+    - **Warn**: Indications of potential issues that aren’t critical.
+    - **Error**: Records of errors in the system that require attention.
+    - **Fatal**: Critical failures in the system needing immediate resolution.
+
+#### Common Use Cases for Logs in Data Engineering
+- **System Monitoring and Alerts**: Used to trigger alerts and monitor system health.
+- **Data Analysis**: Analyzing user behavior patterns, especially in e-commerce or web applications.
+- **Change Data Capture (CDC)**: Tracking database changes to trigger ingestion or transformations in data pipelines.
+- **Machine Learning**: Training models for **anomaly detection** and other analytical purposes.
+- **Automation**: Driving automated processes based on specific events or changes recorded in logs.
+
+## Streaming Systems
+
+#### Key Concepts
+- **Event**: An occurrence or change in the system, like a user clicking a button or a sensor capturing a reading.
+- **Message**: A record containing information about an event, including details, metadata, and a timestamp.
+- **Stream**: A continuous sequence of messages generated from events, forming streaming data.
+
+#### Components of a Streaming System
+1. **Event Producer**: Generates messages for the stream. Examples include IoT devices, apps, websites, and APIs.
+2. **Event Consumer**: Processes messages from the stream. Multiple consumers may exist, each handling messages differently (e.g., a payment service and an inventory service for an e-commerce order).
+3. **Event Router (Streaming Broker)**: Routes messages from the producer to the appropriate consumer, ensuring asynchronous communication. Examples include Apache Kafka and Amazon Kinesis.
+
+#### Two Main Types of Streaming Systems
+1. **Message Queues**: Events are stored in a queue (first-in-first-out). Once a consumer processes a message and confirms receipt, it is deleted.
+    - **Use Case**: Great for ensuring each message is processed once in a specific sequence.
+    - **Example**: Amazon SQS (Simple Queue Service), commonly used in microservices and serverless applications.
+2. **Streaming Platforms**: Events are stored in an **append-only log**. Consumers read messages as read-only, so the messages are **persistent** and can be re-read or reprocessed.
+    - **Use Case**: Useful for reprocessing or replaying data from a specific point in time.
+    - **Examples**: Apache Kafka, Amazon Kinesis Data Streams.
+
+#### Message Queues vs. Streaming Platforms
+- **Message Queue**: The router acts as a temporary queue. Once a message is read by the consumer, it’s deleted, ideal for one-time, sequential processing.
+- **Streaming Platform**: The router maintains a persistent log. Messages are not deleted, allowing replaying or reprocessing data.
+
+#### Applications in Data Engineering
+- **Source Systems**: Streaming systems can be a primary data source, providing real-time data ingestion.
+- **Pipeline Stages**: They can be integrated into ingestion, transformation, or serving stages, handling real-time data for continuous analysis and processing.
